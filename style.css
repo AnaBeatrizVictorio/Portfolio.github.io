@@ -1,0 +1,814 @@
+/*ESTILO GERAL*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+
+  font-style: normal;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+  overflow-x: hidden;
+}
+html {
+  width: 100vw;
+}
+
+.visual {
+  max-width: 80rem;
+  margin: auto;
+}
+
+.geral {
+  display: flex;
+}
+
+h2.titulo {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem;
+}
+
+h2.titulo span {
+  color: #fa8a00;
+}
+/*ESTILO HEADER/CABEÇALHO*/
+
+header {
+  padding: 0.5rem 4%;
+}
+
+header > .visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #565656;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  display: inline-block; /*para funcionar o transform: scale*/
+}
+
+.menu-desktop a:hover {
+  color: #f6c43b;
+  transform: scale(1.05);
+  transition: 0.2s; /*tempo que vai levar para concluir a transição parar crescer quando passo o mouse */
+  border-color: #fa8a00;
+  border-radius: 10px;
+}
+
+header .menu-desktop a {
+  background: #000;
+  padding: 10px 20px;
+  border-radius: 0.25rem;
+  color: #565656;
+  border: 0.18rem solid #000;
+  font-size: 30px;
+
+  text-transform: uppercase; /*coloca tudo em letra maiuscula*/
+  display: flex;
+  display: block;
+}
+
+header .menu-desktop ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  padding: 0 2.5rem;
+}
+
+button:hover,
+form .button-enviar input:hover {
+  box-shadow: 0rem 0rem 0.5rem #f6c43b; /*sombra no botao*/
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/*ESTILO TOPO DO SITE*/
+
+section.topo-do-site {
+  position: relative;
+  min-height: 10vh;
+  padding: 10rem 4% 4rem 4%;
+
+  background-image: url("img/fundo-ondas.png");
+  background-repeat: repeat-x;
+  background-position: center 20%;
+  background-size: cover;
+
+  z-index: 1;
+  overflow: hidden;
+  animation: moverFundo 30s linear infinite;
+}
+
+@keyframes moverFundo {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+section.topo-do-site .geral {
+  align-items: center;
+  justify-content: center;
+  gap: 5.6rem;
+}
+
+.topo-do-site h1 {
+  color: #fff;
+  font-size: 4rem;
+}
+.texto-primario {
+  max-width: 900px; /* Limita a largura */
+  margin-left: 0; /* Alinha à esquerda */
+  margin-right: auto; /* Alinha à esquerda */
+  padding-left: 2rem; /* Um respiro do lado esquerdo */
+  text-align: left;
+}
+
+.topo-do-site .texto-primario h1 span {
+  color: #fa8a00;
+  font-size: 4rem;
+  margin-top: 2.5rem;
+}
+
+.topo-do-site .texto-primario p {
+  color: #ffffff;
+  margin: 2.5rem 0;
+  font-size: 2rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.botao-contato button {
+  padding: 0.6rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #fa8a00;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.topo-do-site .img-primaria img {
+  position: relative;
+  animation: movimento 2s ease-in-out infinite alternate;
+}
+
+@keyframes movimento {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 1.8rem;
+  }
+}
+
+header .visual .logo a img:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+/* .topo-do-site .texto-primario p span {
+  color: #fa8a00;
+} *
+
+/*ESTILO DAS SKILLS*/
+
+section .skills {
+  padding: 5rem 4%;
+  overflow: visible;
+}
+
+.skills .skills-box {
+  color: #e9e3e3;
+  margin-top: 10px; /* diminuído */
+  border-left: 1px solid #fa8a00;
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  width: calc(33% - 2rem);
+  max-width: 900px;
+  min-width: 600px;
+  max-height: 280px;
+  transition: 0.2s;
+  box-shadow: 0 0 15px #fa8a00;
+  overflow: visible !important;
+  margin-bottom: 1rem;
+}
+
+.skills .skills-box i {
+  font-size: 4.3rem;
+  color: #565656;
+  font-size: 3rem; /* Ícones maiores */
+  margin-bottom: 1rem; /* Espaço abaixo do ícone */
+}
+
+.skills .skills-box p {
+  font-size: 25px;
+}
+.skills .flex {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem !important; /* espaçamento abaixo do título */
+  overflow: visible !important;
+}
+
+.skills .skills-box h3 {
+  font-size: 30px;
+  color: #fa8a00;
+}
+
+.skills .skills-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ffc061;
+}
+
+section.sobre {
+  padding: 80px 4%;
+}
+section.sobre .flex {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 100px; /* Ajuste o espaçamento conforme preferir */
+  padding: 20px; /* Espaçamento interno */
+  overflow: visible !important;
+}
+
+.sobre .txt-sobre {
+  color: #fff;
+  max-width: 700px;
+  text-align: right;
+  margin-left: auto; /* Isso ajuda a empurrar o conteúdo para a direita */
+}
+
+.sobre .txt-sobre h2 {
+  font-size: 2.2rem;
+  line-height: 40px; /*deixa as duas linhas mais coladas*/
+  margin-bottom: 2rem;
+}
+
+.sobre .txt-sobre h2 span {
+  color: #fa8a00;
+  display: block; /*span vai para a linha de baixo*/
+}
+
+.sobre .txt-sobre p {
+  margin: 1.2rem 0;
+  width: 500px;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.img-sobre {
+  flex: 1;
+  display: flex;
+  align-items: flex-start; /* alinhamento ao topo */
+  justify-content: flex-start; /* empurra pra direita */
+  padding-top: 1rem;
+  padding-left: 2rem; /* Ajuste fino opcional */
+}
+
+.botao-social button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /*metade do width e do height*/
+  border: none;
+  background-color: #fa8a00;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 0 0.6rem;
+  transition: 0.2s;
+}
+
+/*ESTILO PROJETOS*/
+
+section.projetos {
+  padding: 80px 4%;
+  box-shadow: 0 0 40px 10px #ffffff23;
+  padding-top: 30px;
+}
+
+section.projetos .flex {
+  display: flex; /* Ativa o Flexbox */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.img-projeto {
+  width: 360px;
+  height: 400px;
+  background-color: #fa8a00;
+  background-size: cover;
+  background-position: 100% 0%;
+  transition: 8s;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+}
+
+.img-projeto:hover {
+  background-position: 100% 100%;
+}
+
+.escurecer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0db7;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.escurecer:hover {
+  opacity: 1;
+}
+
+/*ESTILO FORMULARIO*/
+
+section.formulario {
+  padding: 80px 4%;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /*elementos ficam em coluna*/
+  gap: 10px;
+  margin-top: 40px;
+}
+
+form input,
+textarea {
+  width: 100%;
+  background-color: #201f1f;
+  border: 0;
+  outline: 0;
+  padding: 20px 15px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 24px;
+}
+
+form textarea {
+  resize: none;
+  max-height: 200px;
+}
+
+form .button-enviar {
+  margin-top: 20px;
+  text-align: center;
+}
+
+form .button-enviar input {
+  width: 100px;
+  background-color: #fa8a00;
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transform: 0.2s;
+}
+
+/* ESTILO RODAPE */
+
+footer {
+  padding: 10px 4%;
+  box-shadow: 0 0 40px 10px #ffffff23;
+}
+
+footer .flex {
+  display: flex;
+  justify-content: space-between; /* Garante que os itens fiquem separados */
+}
+
+footer .linha-footer {
+  padding: 20px 0;
+}
+
+.borda {
+  border-top: 2px solid #fa8a00;
+  margin-top: -25px;
+}
+
+footer .linha-footer p i {
+  color: #fa8a00;
+  font-size: 22px;
+}
+
+footer .linha-footer p a {
+  color: #fff;
+}
+
+@media screen and (max-width: 1020px) {
+  .geral {
+    flex-direction: column;
+  }
+
+  .topo-do-site .geral {
+    flex-direction: column-reverse;
+  }
+  .menu-desktop,
+  .botao-contato {
+    display: none;
+  }
+}
+
+.digitando {
+  font-size: 6.8rem;
+  color: #fa8a00;
+  font-weight: bold;
+  white-space: pre-line;
+  overflow: hidden;
+  position: relative;
+  white-space: pre-line;
+  display: block; /* importante para alinhar com text-align */
+  text-align: left; /* ✅ aqui é o foco */
+  margin: 0;
+  padding: 0;
+}
+
+#textoDigitado::after {
+  content: "";
+  display: inline-block;
+  height: 1em;
+  width: 5px;
+  background: white;
+  animation: blink 0.7s steps(1) infinite;
+  vertical-align: bottom;
+  margin-left: 5px;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.img-projeto:hover .escurecer {
+  opacity: 1;
+}
+
+/* Remove sublinhado azul do link */
+.link-curriculo {
+  text-decoration: none;
+}
+
+/* Botão estilo retangular */
+.botao-download-cv {
+  background-color: #fa8a00;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap;
+  box-shadow: none;
+}
+
+.botao-download-cv:hover {
+  background-color: #ffc061;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fa8a00;
+}
+
+.botao-curriculo-container {
+  display: flex;
+  justify-content: center; /* Agora o botão vai pro centro */
+  margin-top: 1.5rem;
+}
+
+.seta-baixo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.seta-baixo i {
+  font-size: 3.5rem;
+  color: #fa8a00;
+  animation: piscar-seta 1.5s ease-in-out infinite;
+}
+
+@keyframes piscar-seta {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.linha-laranja {
+  color: #565656;
+}
+
+.linha-branca {
+  color: #fa8a00;
+}
+
+code {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+/* Cores específicas por linguagem */
+code.react {
+  background-color: #111;
+  color: #ffc061;
+}
+
+code.js {
+  background-color: #111;
+  color: #ffc061;
+}
+
+code.sql {
+  background-color: #111;
+  color: #ffc061;
+}
+
+code.csharp {
+  background-color: #111;
+  color: #ffc061;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.fade-delay-3 {
+  animation-delay: 0.9s;
+}
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  opacity: 0;
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-delay-1 {
+  animation-delay: 0.3s;
+}
+.slide-delay-2 {
+  animation-delay: 0.5s;
+}
+.slide-delay-3 {
+  animation-delay: 0.7s;
+}
+.slide-delay-4 {
+  animation-delay: 0.9s;
+}
+@keyframes dropFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.drop-top {
+  opacity: 0;
+  animation: dropFromTop 1s ease-out forwards;
+  animation-delay: 1.2s; /* você pode ajustar esse tempo */
+}
+.onda-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* para permitir o loop */
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.onda-animada {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("img/fundo-ondas.png") repeat-x;
+  background-size: contain; /* ou 'cover' se quiser cobrir tudo */
+  animation: moverOndas 10s linear infinite;
+}
+
+@keyframes moverOndas {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.topo-do-site .interface {
+  position: relative;
+  z-index: 2;
+}
+/* Remove regras genéricas */
+.texto-primario span {
+  color: inherit; /* deixa a cor normal do texto padrão */
+}
+
+/* Aplica cores específicas com classes */
+.lilas {
+  color: #c586ff !important;
+}
+
+.amarelo {
+  color: #ffd700 !important;
+}
+
+.laranja {
+  color: #fa8a00 !important;
+}
+/* Container para os riscos na seção de SKILLS */
+.skills {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.risco-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0; /* Bem lá no fundo */
+  overflow: hidden;
+}
+
+/* Estilo base do risco */
+/* Estilo base do risco */
+.risco-estrela {
+  position: absolute;
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(to top, transparent, #6f00d6, transparent);
+  opacity: 0;
+  transform: translate(0, 100vh) rotate(-45deg); /* começa fora da tela */
+  animation: subirEstrela 4s linear infinite;
+  animation-fill-mode: both; /* mantém transform inicial antes de começar */
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Animação corrigida */
+@keyframes subirEstrela {
+  0% {
+    transform: translate(0, 100vh) rotate(-45deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-100vw, -100vh) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Estilos individuais dos 8 riscos */
+.risco1 {
+  left: 5%;
+  animation-delay: 0s;
+}
+.risco2 {
+  left: 15%;
+  animation-delay: 0.4s;
+}
+.risco3 {
+  left: 25%;
+  animation-delay: 0.8s;
+}
+.risco4 {
+  left: 35%;
+  animation-delay: 0.2s;
+}
+.risco5 {
+  left: 45%;
+  animation-delay: 0.6s;
+}
+.risco6 {
+  left: 55%;
+  animation-delay: 2s;
+}
+.risco7 {
+  left: 65%;
+  animation-delay: 0.4s;
+}
+.risco8 {
+  left: 75%;
+  animation-delay: 0.8s;
+}
+.risco9 {
+  left: 85%;
+  animation-delay: 3.2s;
+}
+.risco10 {
+  left: 95%;
+  animation-delay: 0.6s;
+}
+
+.hidden-on-load {
+  opacity: 0;
+  transform: translateY(300px);
+  transition: opacity 4s ease, transform 4s ease; /* aumentei para 2s */
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}

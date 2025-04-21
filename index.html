@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&family=Press+Start+2P&family=Righteous&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sarala&family=VT323&display=swap" rel="stylesheet">
+  <!-- END GOOGLE FONTS-->
+  <!--BOOTSTRAP-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- END BOOTSTRAP-->
+
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="visual">
+      <div class="logo">
+        <a href="#">
+          <img src="img/logo.svg" alt="Logo">
+        </a>
+      </div>
+      <nav aria-label="main navigation">
+        <ul class="menu-desktop">
+          <li class="slide-left slide-delay-1"><a href="#topo-do-site">Home</a></li>
+          <li class="slide-left slide-delay-2"><a href="#skills">Skills</a></li>
+          <li class="slide-left slide-delay-3"><a href="#sobre">About</a></li>
+          <li class="slide-left slide-delay-4"><a href="#projetos">Projects</a></li>
+        </ul>
+
+      </nav>
+      <div class="botao-contato drop-top">
+        <a href="#contato">
+          <button>CONTACT</button>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="topo-do-site" id="topo-do-site">
+      <div class="onda-container">
+        <img src="img/ondas1.png" alt="Ondas animadas" class="onda-animada" />
+      </div>
+
+      <div class="interface">
+        <div class="geral">
+          <div class="texto-primario">
+            <h1 class="fade-up fade-delay-1">FULL-STACK DEVELOPER<span>.</span></h1>
+            <p class="fade-up fade-delay-2">
+              This portfolio showcases my <span class="lilas">projects</span> and experiences, highlighting my skills as a
+              <span class="laranja">full-stack developer</span>.
+              Here, you'll find solutions <span class="amarelo">I've developed</span>, technologies I master, and my approach to software creation — always
+              focused on efficiency, innovation, and
+              <span class="laranja">best development practices</span>.
+            </p>
+
+
+
+            <a href="#skills" class="seta-baixo fade-up fade-delay-3">
+              <i class="bi bi-chevron-down"></i>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="skills" id="skills">
+      <div class="risco-container"></div>
+      <div class="interface">
+        <h2 class="titulo">MY <span>SKILLS</span></h2>
+        <div class="flex">
+          <div class="skills-box">
+            <h3>React</h3>
+            <p>
+              <code class="react">const dev = () =&gt; &lt;Code passion="🔥" /&gt;;</code><br><br>
+              Fundamentals and advanced topics like hooks, events, conditional rendering, and API integration.
+              Focused on building dynamic, reusable interfaces through real-world projects.
+            </p>
+          </div>
+
+          <div class="skills-box">
+            <h3>SQL</h3>
+            <p>
+              <code class="sql">SELECT * FROM skills WHERE passion = 'true';</code><br><br>
+              Solid knowledge of SQL focused on relational databases, data modeling, table creation, relationships, and optimized queries, applied in practical projects.
+            </p>
+          </div>
+
+          <div class="skills-box">
+            <h3>JavaScript</h3>
+            <p>
+              <code class="js">if (life === 'hard') console.log('Make it async!');</code><br><br>
+              Strong JavaScript skills focused on modern front-end. Experience with DOM, events, ES6+, async programming, and dynamic interfaces.
+            </p>
+          </div>
+
+          <div class="skills-box">
+            <h3>C#</h3>
+            <p>
+              <code class="csharp">var code = new Dream("Scalable solutions with style");</code><br><br>
+              Solid knowledge in OOP with C#, including interfaces, polymorphism, SOLID, design patterns, and LINQ. Experienced in real-world projects, building flexible and testable solutions.
+            </p>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+      <div class="interface">
+        <div class="flex">
+          <div class="img-sobre">
+            <h2>
+              <span class="digitando" id="textoDigitado">
+                <span class="linha-laranja">HELLO, I'M</span><br>
+                <span class="linha-branca">ANA VICTORIO</span>
+              </span>
+            </h2>
+
+          </div>
+
+          <div class="txt-sobre hidden-on-load">
+            <p>Hello! My name is Ana Beatriz and I'm a Computer Science student at PUC Minas Poços de Caldas. I'm focused on full-stack development, with experience in both front-end and back-end.</p>
+            <p>This portfolio aims to showcase projects that demonstrate my ability to build complete solutions — from the interface to server-side logic — always seeking efficiency and quality in every delivery.</p>
+            <p>For more information about my academic and professional background, feel free to download my resume below:</p>
+
+            <div class="botao-curriculo-container">
+              <a href="curriculo2025.pdf" download="Resume_Ana_Beatriz_Victorio.pdf" class="link-curriculo">
+                <button class="botao-download-cv">
+                  <i class="bi bi-file-earmark-arrow-down-fill"></i> Download my resume
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+      <div class="interface">
+        <h2 class="titulo">MY <span>PROJECTS</span></h2>
+        <div class="flex">
+          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
+            <div class="escurecer">Project 1</div>
+          </div>
+          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
+            <div class="escurecer">Project 2</div>
+          </div>
+          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
+            <div class="escurecer">Project 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="formulario" id="contato">
+      <div class="interface">
+        <h2 class="titulo">SEND <span>MESSAGE</span></h2>
+        <form id="form-contato" action="https://formsubmit.co/moreiraanabe394@gmail.com" method="POST">
+          <input type="text" name="nome" id="nome" placeholder="Your name:" required>
+          <input type="email" name="email" id="email" placeholder="Your email:" required>
+          <input type="text" name="celular" id="celular" placeholder="Your phone:">
+          <textarea name="mensagem" id="mensagem" placeholder="Your message" required></textarea>
+
+          <!-- Bot protection -->
+          <input type="hidden" name="_captcha" value="false">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="button-enviar">
+            <input type="submit" value="SEND">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="interface">
+      <div class="linha-footer">
+        <div class="flex">
+          <div class="logo-footer">
+            <img src="img/logo.svg" alt="">
+          </div>
+          <div class="botao-social">
+            <a href="https://www.linkedin.com/in/ana-beatriz-victorio/" target="_blank">
+              <button><i class="bi bi-linkedin"></i></button>
+            </a>
+            <a href="#"><button><i class="bi bi-github"></i></button></a>
+            <a href="https://www.instagram.com/anabe_victorio/" target="_blank">
+              <button><i class="bi bi-instagram"></i></button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="linha-footer borda">
+        <p><i class="bi bi-envelope-fill"></i> <a href="mailto:moreiraanabe394@gmail.com">moreiraanabe394@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="formulario.js"></script>
+</body>
+
+</html>
