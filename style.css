@@ -600,7 +600,7 @@ code.csharp {
 
 .fade-up {
   opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .fade-delay-1 {
@@ -710,105 +710,43 @@ code.csharp {
 .laranja {
   color: #fa8a00 !important;
 }
-/* Container para os riscos na seção de SKILLS */
-.skills {
+
+.seta-direita-projetos {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fa8a00;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 10px #fa8a00;
+  z-index: 10;
+  transition: background 0.2s, transform 0.2s;
+}
+.seta-direita-projetos:hover {
+  background: #ffc061;
+  color: #fa8a00;
+  transform: translateY(-50%) scale(1.08);
+}
+.projetos-slider {
   position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.risco-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0; /* Bem lá no fundo */
-  overflow: hidden;
-}
-
-/* Estilo base do risco */
-/* Estilo base do risco */
-.risco-estrela {
-  position: absolute;
-  width: 2px;
-  height: 120px;
-  background: linear-gradient(to top, transparent, #6f00d6, transparent);
-  opacity: 0;
-  transform: translate(0, 100vh) rotate(-45deg); /* começa fora da tela */
-  animation: subirEstrela 4s linear infinite;
-  animation-fill-mode: both; /* mantém transform inicial antes de começar */
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Animação corrigida */
-@keyframes subirEstrela {
-  0% {
-    transform: translate(0, 100vh) rotate(-45deg);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-100vw, -100vh) rotate(-45deg);
-    opacity: 0;
-  }
-}
-
-/* Estilos individuais dos 8 riscos */
-.risco1 {
-  left: 5%;
-  animation-delay: 0s;
-}
-.risco2 {
-  left: 15%;
-  animation-delay: 0.4s;
-}
-.risco3 {
-  left: 25%;
-  animation-delay: 0.8s;
-}
-.risco4 {
-  left: 35%;
-  animation-delay: 0.2s;
-}
-.risco5 {
-  left: 45%;
-  animation-delay: 0.6s;
-}
-.risco6 {
-  left: 55%;
-  animation-delay: 2s;
-}
-.risco7 {
-  left: 65%;
-  animation-delay: 0.4s;
-}
-.risco8 {
-  left: 75%;
-  animation-delay: 0.8s;
-}
-.risco9 {
-  left: 85%;
-  animation-delay: 3.2s;
-}
-.risco10 {
-  left: 95%;
-  animation-delay: 0.6s;
+  min-height: 420px;
 }
 
 .hidden-on-load {
-  opacity: 0;
-  transform: translateY(300px);
-  transition: opacity 4s ease, transform 4s ease; /* aumentei para 2s */
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
-
 .show {
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
 }

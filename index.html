@@ -75,7 +75,7 @@
 
 
     <section class="skills" id="skills">
-      <div class="risco-container"></div>
+      <!-- <div class="risco-container"></div> -->
       <div class="interface">
         <h2 class="titulo">MY <span>SKILLS</span></h2>
         <div class="flex">
@@ -130,7 +130,7 @@
 
           </div>
 
-          <div class="txt-sobre hidden-on-load">
+          <div class="txt-sobre fade-up fade-delay-1">
             <p>Hello! My name is Ana Beatriz and I'm a Computer Science student at PUC Minas Poços de Caldas. I'm focused on full-stack development, with experience in both front-end and back-end.</p>
             <p>This portfolio aims to showcase projects that demonstrate my ability to build complete solutions — from the interface to server-side logic — always seeking efficiency and quality in every delivery.</p>
             <p>For more information about my academic and professional background, feel free to download my resume below:</p>
@@ -150,16 +150,30 @@
     <section class="projetos" id="projetos">
       <div class="interface">
         <h2 class="titulo">MY <span>PROJECTS</span></h2>
-        <div class="flex">
-          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
-            <div class="escurecer">Project 1</div>
+        <div class="projetos-slider">
+          <div class="flex projetos-grupo" id="grupo-projetos-1">
+            <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
+              <div class="escurecer">Project 1</div>
+            </div>
+            <div class="img-projeto" style="background-image: url(img/projeto2.jpg);">
+              <div class="escurecer">Project 2</div>
+            </div>
+            <div class="img-projeto" style="background-image: url(img/projeto1.jpg);">
+              <div class="escurecer">Project 3</div>
+            </div>
           </div>
-          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
-            <div class="escurecer">Project 2</div>
+          <div class="flex projetos-grupo" id="grupo-projetos-2" style="display:none;">
+            <div class="img-projeto" style="background-image: url(img/teste.jpeg);">
+              <div class="escurecer">Project 4</div>
+            </div>
+            <div class="img-projeto" style="background-image: url(img/projeto2.jpg);">
+              <div class="escurecer">Project 5</div>
+            </div>
+            <div class="img-projeto" style="background-image: url(/img/proj3.jpg);">
+              <div class="escurecer">Project 6</div>
+            </div>
           </div>
-          <div class="img-projeto" style="background-image: url(/img/proj2.PNG);">
-            <div class="escurecer">Project 3</div>
-          </div>
+          <button class="seta-direita-projetos" id="seta-direita-projetos" aria-label="Próximos projetos"><i class="bi bi-chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -196,7 +210,9 @@
             <a href="https://www.linkedin.com/in/ana-beatriz-victorio/" target="_blank">
               <button><i class="bi bi-linkedin"></i></button>
             </a>
-            <a href="#"><button><i class="bi bi-github"></i></button></a>
+            <a href="https://github.com/AnaBeatrizVictorio" target="_blank">
+              <button><i class="bi bi-github"></i></button>
+            </a>
             <a href="https://www.instagram.com/anabe_victorio/" target="_blank">
               <button><i class="bi bi-instagram"></i></button>
             </a>

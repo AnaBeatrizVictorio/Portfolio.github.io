@@ -64,15 +64,7 @@ form.addEventListener("submit", function (e) {
     resposta.style.color = "#fa8a00";
   }
 });
-const riscoContainer = document.querySelector(".risco-container");
 
-for (let i = 1; i <= 30; i++) {
-  const risco = document.createElement("div");
-  risco.classList.add("risco-estrela");
-  risco.style.left = `${Math.random() * 100}%`; // posição aleatória
-  risco.style.animationDelay = `${Math.random() * 5}s`; // delay aleatório
-  riscoContainer.appendChild(risco);
-}
 function revealOnScroll() {
   const elements = document.querySelectorAll(".hidden-on-load");
   elements.forEach((el) => {
@@ -88,3 +80,47 @@ function revealOnScroll() {
 }
 
 window.addEventListener("scroll", revealOnScroll);
+
+document.addEventListener('DOMContentLoaded', function() {
+  const setaDireita = document.getElementById('seta-direita-projetos');
+  const grupo1 = document.getElementById('grupo-projetos-1');
+  const grupo2 = document.getElementById('grupo-projetos-2');
+  let mostrandoGrupo1 = true;
+  if(setaDireita && grupo1 && grupo2) {
+    setaDireita.addEventListener('click', function() {
+      if(mostrandoGrupo1) {
+        grupo1.style.display = 'none';
+        grupo2.style.display = 'flex';
+      } else {
+        grupo1.style.display = 'flex';
+        grupo2.style.display = 'none';
+      }
+      mostrandoGrupo1 = !mostrandoGrupo1;
+    });
+  }
+});
+
+function reiniciarAnimacaoSobre() {
+  const sobre = document.querySelector('.txt-sobre');
+  if (sobre) {
+    sobre.classList.remove('fade-up');
+    // Força reflow para reiniciar a animação
+    void sobre.offsetWidth;
+    sobre.classList.add('fade-up');
+  }
+}
+
+window.addEventListener('hashchange', function() {
+  if (window.location.hash === '#sobre') {
+    reiniciarAnimacaoSobre();
+  }
+});
+
+window.addEventListener('scroll', function() {
+  const sobre = document.querySelector('.txt-sobre');
+  if (!sobre) return;
+  const rect = sobre.getBoundingClientRect();
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    reiniciarAnimacaoSobre();
+  }
+});
