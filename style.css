@@ -278,7 +278,7 @@ section.sobre .flex {
 .sobre .txt-sobre p {
   margin: 1.2rem 0;
   width: 500px;
-  font-size: 30px;
+  font-size: 23px;
   text-align: justify;
 }
 
@@ -320,18 +320,35 @@ section.projetos .flex {
 
 .img-projeto {
   width: 360px;
-  height: 400px;
-  background-color: #fa8a00;
+  height: 420px;
   background-size: cover;
-  background-position: 100% 0%;
-  transition: 8s;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 40px;
   cursor: pointer;
-  border-radius: 50px;
+  border: 3px solid #fa8a00;
   position: relative;
+  transition: 0.2s;
 }
 
 .img-projeto:hover {
-  background-position: 100% 100%;
+  background-position: center;
+  animation: rolarImagem 8s linear infinite;
+}
+
+@keyframes rolarImagem {
+  0% {
+    background-position: center top;
+  }
+  100% {
+    background-position: center bottom;
+  }
+}
+
+.img-projeto.img-grande {
+  width: 500px;
+  height: 600px;
+  background-size: 120%;
 }
 
 .escurecer {
@@ -711,42 +728,42 @@ code.csharp {
   color: #fa8a00 !important;
 }
 
-.seta-direita-projetos {
-  position: absolute;
-  right: -30px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #fa8a00;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 0 10px #fa8a00;
-  z-index: 10;
-  transition: background 0.2s, transform 0.2s;
-}
-.seta-direita-projetos:hover {
-  background: #ffc061;
-  color: #fa8a00;
-  transform: translateY(-50%) scale(1.08);
-}
-.projetos-slider {
+/* Botão de navegação dos projetos */
+.projetos .interface {
   position: relative;
-  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hidden-on-load {
-  opacity: 1;
-  transform: none;
-  transition: none;
+.projetos-slider {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.show {
-  opacity: 1;
-  transform: none;
+
+.seta-direita-projetos {
+  background: rgba(250, 138, 0, 0.2);
+  border: 2px solid #fa8a00;
+  color: #fa8a00;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+.seta-direita-projetos:hover {
+  background: rgba(250, 138, 0, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #fa8a00;
+}
+
+.projetos-grupo {
+  flex: 1;
 }

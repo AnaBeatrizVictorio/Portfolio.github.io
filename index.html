@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <!-- END BOOTSTRAP-->
 
-  <title>Portfolio</title>
+  <title>Ana Beatriz Victorio | Portfolio</title>
   <link rel="stylesheet" href="/style.css">
 </head>
 
@@ -131,12 +131,12 @@
           </div>
 
           <div class="txt-sobre fade-up fade-delay-1">
-            <p>Hello! My name is Ana Beatriz and I'm a Computer Science student at PUC Minas Poços de Caldas. I'm focused on full-stack development, with experience in both front-end and back-end.</p>
-            <p>This portfolio aims to showcase projects that demonstrate my ability to build complete solutions — from the interface to server-side logic — always seeking efficiency and quality in every delivery.</p>
-            <p>For more information about my academic and professional background, feel free to download my resume below:</p>
+            <p>Software developer focused on web and mobile technologies, with experience in React, React Native, C#, .NET, and SQL, and solid knowledge of HTML, CSS, and JavaScript. I have developed academic and practical projects available on GitHub, with an emphasis on back-end development using C# (.NET) and front-end fundamentals.</p>
+            <p>A key project is ColheCash, a complete JavaScript application developed as my graduation project, focused on financial control, where I worked on business rule implementation, input data validation, execution flow organization, and user interaction.</p>
+            <p>On the back-end, I developed console applications in C#, including a Banking System, Inventory Control System, and Employee Management System, applying Object-Oriented Programming, encapsulation, CRUD operations, and state management.. For more information about my academic and professional background, feel free to download my resume below:</p>
 
             <div class="botao-curriculo-container">
-              <a href="CurriculoAtualizadoAna2025.pdf" download="Resume_Ana_Beatriz_Victorio.pdf" class="link-curriculo">
+              <a href="curriculo-ana-beatriz.pdf" download="Resume_Ana_Beatriz_Victorio.pdf" class="link-curriculo">
                 <button class="botao-download-cv">
                   <i class="bi bi-file-earmark-arrow-down-fill"></i> Download my resume
                 </button>
@@ -162,19 +162,23 @@
               <div class="escurecer">Project 3</div>
             </div>
           </div>
-          <!-- <div class="flex projetos-grupo" id="grupo-projetos-2" style="display:none;">
-            <div class="img-projeto" style="background-image: url(img/teste.jpeg);">
-              <div class="escurecer">Project 4</div>
-            </div> -->
-          <!-- <div class="img-projeto" style="background-image: url(img/projeto2.jpg);">
+          <div class="flex projetos-grupo" id="grupo-projetos-2" style="display:none;">
+            <div class="img-projeto" style="background-image: url(img/testehs.png?v=3);">
+              <div class="escurecer">
+                <a href="https://github.com/AnaBeatrizVictorio/Sistema-Bancario" target="_blank" style="color: #fff; text-decoration: none;">
+                  Sistema Bancário C#
+                </a>
+              </div>
+            </div>
+            <div class="img-projeto" style="background-image: url(img/viagens.png);">
               <div class="escurecer">Project 5</div>
-            </div> -->
-          <!-- <div class="img-projeto" style="background-image: url(/img/proj3.jpg);">
+            </div>
+            <div class="img-projeto" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
               <div class="escurecer">Project 6</div>
-            </div> -->
+            </div>
+          </div>
         </div>
         <button class="seta-direita-projetos" id="seta-direita-projetos" aria-label="Próximos projetos"><i class="bi bi-chevron-right"></i></button>
-      </div>
       </div>
     </section>
 
@@ -226,6 +230,23 @@
   </footer>
 
   <script src="formulario.js"></script>
+  <script>
+    // Navegação dos projetos
+    const btnDireita = document.getElementById('seta-direita-projetos');
+    const grupos = document.querySelectorAll('.projetos-grupo');
+    let indiceAtual = 0;
+
+    btnDireita.addEventListener('click', () => {
+      // Esconde o grupo atual
+      grupos[indiceAtual].style.display = 'none';
+
+      // Avança para o próximo grupo
+      indiceAtual = (indiceAtual + 1) % grupos.length;
+
+      // Mostra o próximo grupo
+      grupos[indiceAtual].style.display = 'flex';
+    });
+  </script>
 </body>
 
 </html>
